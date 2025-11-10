@@ -1,0 +1,212 @@
+h1 {
+    font-size: 20vh;
+    padding: 10vh 0 0 5vw;
+    padding-bottom: 12vh;
+    height: 23vh;
+    color: white;
+    pointer-events: none;
+}
+
+.actionButton {
+    transition: all 0.5s;
+    height: 7vh;
+    width: 20vw;
+    border-radius: 15px;
+    border: none;
+    background-color: cadetblue;
+    font-size: 3vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#backgroundCover01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    width: 100vw;
+    z-index: -11;
+}
+
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+#About-Me:hover {
+    background-color: rgb(178, 32, 32);
+    height: 8vh;
+    width: 22vw;
+}
+
+#My-Stuff:hover {
+    background-color: rgb(178, 32, 32);
+    height: 8vh;
+    width: 22vw;
+}
+
+.AboutMeContainer {
+    text-align: center;
+    width: 50%;
+    float: left;
+    display: inline;
+
+}
+
+.MyStuffContainer {
+    text-align: center;
+    width: 50%;
+    float: right;
+    display: inline;
+}
+
+#My-Stuff {
+    margin-right: 5vw;
+    position: relative;
+}
+
+#About-Me {
+    margin-left: 5vw;
+    position: relative;
+}
+
+.AboutMeMain {
+    position: absolute;
+    display: none;
+    top: 100vh;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background: linear-gradient(135deg, #0066c5, #0157a7, #014585, #0155a3, #0066c5);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    z-index: -1;
+    text-align: center;
+}
+
+.MyStuffMain {
+    position: absolute;
+    display: none;
+    top: 100vh;
+    left: 0;
+    height: 200vh;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    background: linear-gradient(135deg, #00a651, #009344, #007a38, #009e49, #00a651);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+    z-index: -1;
+    text-align: center;
+    justify-content: center;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    25% {
+        background-position: 50% 0%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    75% {
+        background-position: 50% 100%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#scrollBarTotal{
+    position: absolute;
+    height: 96vh;
+    width: 1vw;
+    background-color: rgba(0, 0, 0);
+    border-radius: 10px;
+    z-index: 10;
+    opacity: 0.50;
+    transition: all 1s;
+}
+
+#scrollBar{
+    position: fixed;
+    top: 2vh;
+    right: -1vw;
+    height: 0vh;
+    width: 1vw;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    z-index: 10;
+    opacity: 0.50;
+    transition: all 1s;
+
+}
+
+#scrollBarCurrent {
+    position: absolute;
+    height : 92vh;
+    width : 0.4vw;
+    top: 2vh;
+    left: 0.3vw;
+    opacity: 0.75;
+    background-color: black;
+    border-radius: 10px;
+}
+#mainBackgroundDiv{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+    overflow: hidden;
+}
+
+h2 {
+    color: white;
+    font-size: 5vh;
+}
+
+.ProjContainer {
+    width: 30vw;
+    height: 30vw;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    display: inline-block;
+    float: left;
+    margin-left: 13.34vw;
+    margin-top: 13.34vh;
+}
+
+.ProjContainer:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 15px white;
+    transform: scale(1.05);
+    transition: all 0.5s ease;
+}
+
+.moreInfo{
+    color: white;
+    font-size: 3vh;
+    margin-top: 1vh;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.logos{
+    position: absolute;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
