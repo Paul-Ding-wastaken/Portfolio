@@ -271,7 +271,7 @@ function LandingPage() {
                         </div>
                         <div className="ProjContainer" onClick={() => window.open("https://github.com/Paul-Ding-wastaken/Native-React")} onMouseEnter={(e) => handleMouseEnter(e) } onMouseLeave={(e) => handleMouseLeave(e)}>
                             <h2>HelpMy App</h2>
-                            <img style={{opacity: '1', padding: '5vh'}} className="doNotChange" src={helpMyImage} width="75vw" height="auto"></img>
+                            <img style={{opacity: '1', padding: '5vh', marginTop: '-5vh'}} className="doNotChange" src={helpMyImage} width="75vw" height="auto"></img>
                             <p className = "moreInfo">Click to check it out on github!</p>
                             <img style={{marginLeft: "-8vw"}} className = "logos" src={expoLogo} height="65vh" width = "65vh" alt="Unity Logo" />
                             <img style={{marginLeft: "3vw", marginTop: "0vh"}} className = "logos" src={TSLogo} height="65vh" width = "65vh" alt="C# Logo" />
