@@ -1,0 +1,22 @@
+.footer {
+    background: var(--bg-alt);
+    border-top: 1px solid var(--border);
+}
+
+.footer-inner {
+    text-align: center;
+}
+
+.footer-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.footer-copyright {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}

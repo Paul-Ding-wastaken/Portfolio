@@ -1,0 +1,145 @@
+.hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 46rem;
+    pointer-events: none;
+}
+
+.hero-inner a {
+    pointer-events: auto;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--signal);
+    margin: 0 0 1.5rem;
+    animation: fade-in-up 0.6s ease both;
+}
+
+.hero-eyebrow::before {
+    content: '';
+    width: 1.75rem;
+    height: 1px;
+    background: var(--signal);
+}
+
+.hero-title {
+    font-size: clamp(2.75rem, 8vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.02;
+    margin-bottom: 1.5rem;
+    animation: fade-in-up 0.6s ease 0.1s both;
+}
+
+.hero-typed {
+    color: var(--signal);
+}
+
+.hero-caret {
+    color: var(--signal);
+    animation: caret-blink 1s step-end infinite;
+}
+
+@keyframes caret-blink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    max-width: 34rem;
+    margin-bottom: 2.5rem;
+    animation: fade-in-up 0.6s ease 0.2s both;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    animation: fade-in-up 0.6s ease 0.3s both;
+}
+
+.hero-scroll-cue {
+    position: absolute;
+    left: clamp(1.25rem, 5vw, 3rem);
+    bottom: clamp(1.5rem, 4vw, 3rem);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.hero-scroll-line {
+    width: 1px;
+    height: 2.5rem;
+    background: var(--line-strong);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-scroll-line::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--signal);
+    transform: translateY(-100%);
+    animation: scroll-line 1.8s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-scroll-cue {
+        display: none;
+    }
+}
